@@ -1,76 +1,60 @@
 User Management App
 
-This is a React-based user management application that integrates with the Reqres API. It allows users to log in, view a paginated list of users, edit user details, and delete users. The app is built following the requirements outlined in the assignment.
 
-Table of Contents
+Overview
+This is a React-based application that integrates with the Reqres API to perform user management tasks such as authentication, listing users, editing, and deleting users. The app uses Bootstrap for styling, providing a clean and responsive UI with a classic look.
 
 Features
+Authentication : Users can log in using valid credentials.
+User List : Displays a paginated list of users with their details (name, email, avatar).
+Edit User : Allows updating user details (first name, last name, email).
+Delete User : Removes users from the list.
+Pagination : Supports navigating through multiple pages of users.
+Responsive Design : Works seamlessly on both desktop and mobile devices.
+Tech Stack
+Frontend Framework : React
+Styling : Bootstrap + Custom CSS
+API Integration : Axios for HTTP requests
+State Management : React Context API
+Routing : React Router
 Installation
-Usage
-Deployment
-Technologies Used
-Folder Structure
-Error Handling
-Contributing
-Features
+Prerequisites
+Node.js (v16 or higher)
+npm (Node Package Manager)
 
-Level 1: Authentication Screen
-Users can log in using the following credentials:
 
+Steps to Run Locally 
+git clone https://github.com/your-repo/react-user-management.git
+cd react-user-management 
+npm install
+npm start 
+The app will launch in your default browser at http://localhost:3000.
+
+Login Credentials :
 Email: eve.holt@reqres.in
 Password: cityslicka
 
-On successful login, the token is stored in localStorage, and the user is redirected to the Users List page.
-
-Level 2: List All Users
-
-Displays a paginated list of users fetched from the /api/users?page=1 endpoint.
-Each user's first name, last name, and avatar are displayed in a structured layout (cards or table format).
-Pagination is implemented to navigate through different pages of users.
-
-
-Level 3: Edit, Delete, and Update Users
-Edit: Clicking the "Edit" button opens a form pre-filled with the user's data. 
-Users can update their first name, last name, and email using the /api/users/{id} endpoint.
-Delete: Clicking the "Delete" button removes the user from the list using the /api/users/{id} endpoint.
-Success or error messages are displayed based on the outcome of each operation.
-Bonus Features
-
-Client-Side Search: Users can search and filter the list of users by name or email.
-React Router: The React Router handles navigation between pages (Login, User List, Edit User).
-Responsive Design: The app is mobile-friendly and works well on desktop and mobile devices.
-
- http://localhost:3001 
-
-
 Usage
-Login
-Use the following credentials to log in:
-Email: eve.holt@reqres.in
-Password: cityslicka
-Users List
-After logging in, you will see a paginated list of users.
-Use the pagination buttons to navigate between pages.
-Edit User
-Click the "Edit" button next to a user to open the edit form.
-Update the user's details and save the changes.
-Delete User
-Click the "Delete" button next to a user to remove them from the list.
-Search
-Use the search bar to filter users by name or email.
+Login :
+Navigate to /login and enter valid credentials (eve.holt@reqres.in, cityslicka).
+On successful login, you'll be redirected to the user list page.
+User List :
+View paginated users with their avatars, names, and emails.
+Use the pagination controls to navigate between pages.
+Edit User :
+Click the "Edit" button on a user card to open the edit form.
+Update the user's details and save changes.
+Delete User :
+Click the "Delete" button to remove a user from the list.
+API Documentation
+The app uses the following endpoints from the Reqres API (https://reqres.in/api):
 
-
-Technologies Used
-React : Frontend framework.
-Bootstrap : CSS framework for styling.
-Reqres API : Mock API for user data.
-React Router : For navigation between pages.  
-
+POST /api/login : Authenticate user with email and password.
+GET /api/users?page=1 : Fetch paginated user data.
+PUT /api/users/{id} : Update user details.
+DELETE /api/users/{id} : Delete a user.
 Error Handling
-API errors are handled gracefully, and appropriate error messages are displayed to the user.
-Form validation is implemented for the login and edit screens to ensure all required fields are filled. 
-
-Contributing
-Feel free to fork this repository and submit pull requests if you'd like to contribute! 
-
+Invalid login credentials display an error message.
+API errors (e.g., failed fetch/update/delete) show appropriate alerts.
+Token persistence ensures users remain logged in unless they manually log out.
 
