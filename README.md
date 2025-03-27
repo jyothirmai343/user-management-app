@@ -29,7 +29,8 @@ Pagination is implemented to navigate through different pages of users.
 
 
 Level 3: Edit, Delete, and Update Users
-Edit: Clicking the "Edit" button opens a form pre-filled with the user's data. Users can update their first name, last name, and email using the /api/users/{id} endpoint.
+Edit: Clicking the "Edit" button opens a form pre-filled with the user's data. 
+Users can update their first name, last name, and email using the /api/users/{id} endpoint.
 Delete: Clicking the "Delete" button removes the user from the list using the /api/users/{id} endpoint.
 Success or error messages are displayed based on the outcome of each operation.
 Bonus Features
