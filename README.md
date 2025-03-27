@@ -1,4 +1,5 @@
 User Management App
+
 This is a React-based user management application that integrates with the Reqres API. It allows users to log in, view a paginated list of users, edit user details, and delete users. The app is built following the requirements outlined in the assignment.
 
 Table of Contents
